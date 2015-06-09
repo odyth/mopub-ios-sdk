@@ -11,6 +11,4 @@
 
 @interface MPHTMLBannerCustomEvent : MPBannerCustomEvent <MPAdWebViewAgentDelegate>
 
-@property (nonatomic, weak) id<MPPrivateBannerCustomEventDelegate> delegate;
-
 @end

@@ -22,7 +22,7 @@
 - (void)requestAdWithSize:(CGSize)size customEventInfo:(NSDictionary *)info
 {
     MPLogInfo(@"Loading MoPub MRAID banner");
-    MPAdConfiguration *configuration = [self.delegate configuration];
+    MPAdConfiguration *configuration = [(id<MPPrivateBannerCustomEventDelegate>)self.delegate configuration];
 
     CGRect adViewFrame = CGRectZero;
     if ([configuration hasPreferredSize]) {
@@ -43,12 +43,12 @@
 
 - (NSString *)adUnitId
 {
-    return [self.delegate adUnitId];
+    return [(id<MPPrivateBannerCustomEventDelegate>)self.delegate adUnitId];
 }
 
 - (MPAdConfiguration *)adConfiguration
 {
-    return [self.delegate configuration];
+    return [(id<MPPrivateBannerCustomEventDelegate>)self.delegate configuration];
 }
 
 - (UIViewController *)viewControllerForPresentingModalView

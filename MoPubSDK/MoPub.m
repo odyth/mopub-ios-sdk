@@ -17,6 +17,13 @@
 
 @end
 
+@interface MPRewardedVideo ()
+
++ (void)initializeWithDelegate:(id<MPRewardedVideoDelegate>)delegate;
+
+@end
+
+
 @implementation MoPub
 
 + (MoPub *)sharedInstance

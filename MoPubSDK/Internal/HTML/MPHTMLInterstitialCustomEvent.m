@@ -33,7 +33,7 @@
 - (void)requestInterstitialWithCustomEventInfo:(NSDictionary *)info
 {
     MPLogInfo(@"Loading MoPub HTML interstitial");
-    MPAdConfiguration *configuration = [self.delegate configuration];
+    MPAdConfiguration *configuration = [(id<MPPrivateInterstitialCustomEventDelegate>)self.delegate configuration];
     MPLogTrace(@"Loading HTML interstitial with source: %@", [configuration adResponseHTMLString]);
 
     self.interstitial = [[MPInstanceProvider sharedProvider] buildMPHTMLInterstitialViewControllerWithDelegate:self
@@ -55,7 +55,7 @@
 
 - (NSString *)adUnitId
 {
-    return [self.delegate adUnitId];
+    return [(id<MPPrivateInterstitialCustomEventDelegate>)self.delegate adUnitId];
 }
 
 - (void)interstitialDidLoadAd:(MPInterstitialViewController *)interstitial

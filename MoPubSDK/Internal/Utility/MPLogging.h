@@ -32,6 +32,7 @@ void _MPLogInfo(NSString *format, ...);
 void _MPLogWarn(NSString *format, ...);
 void _MPLogError(NSString *format, ...);
 void _MPLogFatal(NSString *format, ...);
+void _MPLog(MPLogLevel level, NSString *format, va_list args);
 
 #if MP_DEBUG_MODE && !SPECS
 

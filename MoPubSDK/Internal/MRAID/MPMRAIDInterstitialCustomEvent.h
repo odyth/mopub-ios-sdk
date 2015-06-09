@@ -11,6 +11,4 @@
 
 @interface MPMRAIDInterstitialCustomEvent : MPInterstitialCustomEvent <MPInterstitialViewControllerDelegate>
 
-@property (nonatomic, weak) id<MPPrivateInterstitialCustomEventDelegate> delegate;
-
 @end

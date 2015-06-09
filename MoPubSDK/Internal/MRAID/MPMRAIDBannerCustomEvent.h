@@ -10,6 +10,4 @@
 
 @interface MPMRAIDBannerCustomEvent : MPBannerCustomEvent
 
-@property (nonatomic, weak) id<MPPrivateBannerCustomEventDelegate> delegate;
-
 @end

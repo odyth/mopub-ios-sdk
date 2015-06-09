@@ -29,12 +29,12 @@
 - (void)requestAdWithSize:(CGSize)size customEventInfo:(NSDictionary *)info
 {
     MPLogInfo(@"Loading MoPub HTML banner");
-    MPLogTrace(@"Loading banner with HTML source: %@", [[self.delegate configuration] adResponseHTMLString]);
+    MPLogTrace(@"Loading banner with HTML source: %@", [[(id<MPPrivateBannerCustomEventDelegate>)self.delegate configuration] adResponseHTMLString]);
 
     CGRect adWebViewFrame = CGRectMake(0, 0, size.width, size.height);
     self.bannerAgent = [[MPInstanceProvider sharedProvider] buildMPAdWebViewAgentWithAdWebViewFrame:adWebViewFrame
                                                                                            delegate:self];
-    [self.bannerAgent loadConfiguration:[self.delegate configuration]];
+    [self.bannerAgent loadConfiguration:[(id<MPPrivateBannerCustomEventDelegate>)self.delegate configuration]];
 }
 
 - (void)dealloc
@@ -56,7 +56,7 @@
 
 - (NSString *)adUnitId
 {
-    return [self.delegate adUnitId];
+    return [(id<MPPrivateBannerCustomEventDelegate>)self.delegate adUnitId];
 }
 
 - (UIViewController *)viewControllerForPresentingModalView
