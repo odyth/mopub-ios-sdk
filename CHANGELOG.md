@@ -1,3 +1,18 @@
+## Version 3.10 (August 3rd, 2015)
+
+- **Minor improvements**.
+- **Bug fixes**.
+	- didDismissInterstitial is now called when the dismiss animation has completed.
+	
+## Version 3.9 (July 1st, 2015)
+
+- **Added VAST 3.0 standard support for video ads**.
+- **Improved video player UX**.
+- **Improved error messages**.
+- **Improved deep link handling**.
+- **Bug fixes**.
+	- Fixed clickthrough behavior for MRAID ads that use iframes.
+
 ## Version 3.8 (June 1st, 2015)
 
 - **Minor improvements**.

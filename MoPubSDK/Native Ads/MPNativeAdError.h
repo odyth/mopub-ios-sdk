@@ -5,8 +5,6 @@
 
 #import <Foundation/Foundation.h>
 
-extern NSString *const MoPubNativeAdsSDKDomain;
-
 typedef enum MPNativeAdErrorCode {
     MPNativeAdErrorUnknown = -1,
 
@@ -19,4 +17,13 @@ typedef enum MPNativeAdErrorCode {
     MPNativeAdErrorContentDisplayError = -1100,
 } MPNativeAdErrorCode;
 
-extern NSString *const MPNativeAdErrorContentDisplayErrorReasonKey;
+extern NSString * const MoPubNativeAdsSDKDomain;
+
+NSError *MPNativeAdNSErrorForInvalidAdServerResponse(NSString *reason);
+NSError *MPNativeAdNSErrorForAdUnitWarmingUp(void);
+NSError *MPNativeAdNSErrorForNoInventory(void);
+NSError *MPNativeAdNSErrorForNetworkConnectionError(void);
+NSError *MPNativeAdNSErrorForInvalidImageURL(void);
+NSError *MPNativeAdNSErrorForImageDownloadFailure(void);
+NSError *MPNativeAdNSErrorForContentDisplayErrorMissingRootController(void);
+NSError *MPNativeAdNSErrorForContentDisplayErrorInvalidURL(void);
